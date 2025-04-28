@@ -8,34 +8,75 @@
   </head>
   <body>
     <main>
-      <div class="question">288282</div>
-      <div class="answer">838939</div>
-  
-    <div class="buttons">
-        <button class="subbut" style="color: #858585;">Ac</button>
-        <button class="subbut"><img src="/Vector.png" alt="" /></button>
-        <button class="subbut" style="background-color: #ADE2FF; color: #109DFF;">/</button>
-        <button class="subbut" style="background-color: #ADE2FF; color: #109DFF;">*</button>
-      </div>
-      <div  class="buttons">
-        <button class="subbut">7</button>
-        <button class="subbut">8</button>
-        <button class="subbut">9</button>
-        <button class="subbut" style="background-color: #ADE2FF; color: #109DFF;">-</button>
-      </div>
-      <div class="buttons">
-        <button class="subbut">4</button>
-        <button class="subbut">5</button>
-        <button class="subbut">6</button>
-        <button class="subbut" style="background-color: #ADE2FF; color: #109DFF;">+</button>
-      </div>
-      <div class="buttons">
-        <button class="subbut"  style="flex-grow: 1;">0</button>
-        <button class="subbut">.</button>
-        <button class="subbut" style="background-color: #19ACFF; color: #FFFFFF; box-shadow: -10px 10px 14px #B2DAFF;">=</button>
-      </div>
+      <input class="answer" type="text" id="display" disabled />
 
+      <div class="buttons">
+        <button class="subbut" style="color: #858585" onclick="clearAll('')">Ac</button>
+        <button class="subbut" onclick="clearOne('')">
+          <img src="/Vector.png" alt="" width="15px" height="15px" />
+        </button>
+        <button
+          class="subbut"
+          style="background-color: #ade2ff; color: #109dff"
+          onclick="appendToDisplay('/')"
+        >
+          /
+        </button>
+        <button
+        class="subbut"
+        style="background-color: #ade2ff; color: #109dff"
+        onclick="appendToDisplay('*')"
+      >
+        *
+      </button>
+      </div>
+      <div class="buttons">
+        <button class="subbut" onclick="appendToDisplay('7')">7</button>
+        <button class="subbut" onclick="appendToDisplay('8')">8</button>
+        <button class="subbut" onclick="appendToDisplay('9')">9</button>
+        <button
+          class="subbut"
+          style="background-color: #ade2ff; color: #109dff"
+          onclick="appendToDisplay('-')"
+        >
+          -
+        </button>
+      </div>
+      <div class="buttons">
+        <button class="subbut" onclick="appendToDisplay('4')">4</button>
+        <button class="subbut" onclick="appendToDisplay('5')">5</button>
+        <button class="subbut" onclick="appendToDisplay('6')">6</button>
+        <button
+        class="subbut"
+        style="background-color: #ade2ff; color: #109dff"
+        onclick="appendToDisplay('+')"
+      >
+        +
+      </button>
+      </div>
+      <div class="buttons">
+        <button class="subbut" onclick="appendToDisplay('1')">1</button>
+        <button class="subbut" onclick="appendToDisplay('2')">2</button>
+        <button class="subbut" onclick="appendToDisplay('3')">3</button>
+        <button class="subbut"  onclick="appendToDisplay('0')">0</button>
+     
+      </div>
+      <div class="buttons" >
+        <button class="subbut"  onclick="appendToDisplay('00')" style="flex: 1;">00</button>
+        <button class="subbut" onclick="appendToDisplay('.')">.</button>
+        <button
+          class="subbut"
+          style="
+            background-color: #19acff;
+            color: #ffffff;
+            box-shadow: -10px 10px 14px #b2daff;
+          "
+          onclick="calculateResult()"
+        >
+          =
+        </button>
+      </div>
     </main>
+    <script src="/index.js"></script>
   </body>
-  <script src="/index.js"></script>
 </html>
